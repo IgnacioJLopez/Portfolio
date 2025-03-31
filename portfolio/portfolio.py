@@ -22,15 +22,45 @@ def index() -> rx.Component:
                 text_align="center",
                 margin_bottom="4",
             ),
-            rx.link(
-                rx.button("Check my LinkedIn"),
-                href="https://www.linkedin.com/in/igjlopez/",
-                is_external=True,
+            rx.text(
+                "Turning data into action.",
+                font_size="lg",
+                text_align="left",
+                margin_bottom="8",
             ),
-            spacing="5",
+            rx.hstack(
+                rx.button(
+                    "My Projects",
+                    color_scheme="indigo",
+                    size='4',
+                    variant="outline",
+                    radius="large",
+                    on_click=rx.redirect("/projects")
+                ),
+                rx.button(
+                    "About Me",
+                    color_scheme="amber",
+                    size='4',
+                    variant="outline",
+                    radius="large",
+                    on_click=rx.redirect("/about"),
+                ),
+                rx.button(
+                    "Contact Me",
+                    color_scheme="indigo",
+                    size='4',
+                    variant="outline",
+                    radius="large",
+                    on_click=rx.redirect("/contact"),
+                ),
+                spacing="5"
+            ),
+            spacing="6",
             justify="center",
+            align="start",
             min_height="85vh",
         )
+        
     )
 
 
