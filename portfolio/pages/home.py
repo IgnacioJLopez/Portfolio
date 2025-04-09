@@ -90,50 +90,42 @@ def home() -> rx.Component:
         max_width="1200px",
     )
 
-    # Projects showcase section
-    projects_section = rx.container(
-        rx.vstack(
-            rx.heading("Data Projects", size="7", margin_bottom="6"),
-            rx.grid(
-                project_card(
-                    "Competition: Goodreads Books Review Rating Prediction",
-                    "I trained various machine learning models including NMF, Naive Bayes, and Random Forest",
-                    ["Sckit Learn", "NMF", "Naive Bayes", "NLP", "TensorFlow"],
-                ),
-                project_card(
-                    "Customer Segmentation",
-                    "Created an unsupervised learning solution to identify key customer segments.",
-                    ["K-means", "PCA", "Pandas", "Scikit-learn"],
-                ),
-                project_card(
-                    "Prediccion de recompra",
-                    "bla bla bla",
-                    ["BERT", "Transformers", "NLP", "PyTorch"],
-                ),
-                columns=rx.breakpoints(
-                    xs="1",
-                    sm="1",
-                    md="2",
-                    lg="3",
-                    xl="3",
-                ),
-                spacing="6",
-                width="100%",
-                margin_top="8",
-                justify="center",
-            ),
-            width="100%",
-            padding_y="16",
-            id="projects-showcase",
-            align="center",
-            justify="center"
+    projects_section =  rx.container(
+        rx.heading("Data Projects", size="7", id="projects", margin_bottom="19", align="center"),
+        rx.text(
+            "Here are some of the projects I've worked on. Each project showcases my skills in data analysis, machine learning, and software development.",
+            font_size="lg",
+            text_align="center",
+            margin_bottom="16",
         ),
-        max_width="1200px",
-        bg="gray.50",
-        _dark={"bg": "gray.900"},
-        width="100%",
-        align="center",
-        justify="center"
+        rx.grid(
+            project_card(
+                "Competition: Goodreads Books Review Rating Prediction",
+                "I trained various machine learning models including NMF, Naive Bayes, and Random Forest",
+                ["Sckit Learn", "NMF", "Naive Bayes", "NLP", "TensorFlow"],
+            ),
+            project_card(
+                "Customer Segmentation",
+                "Created an unsupervised learning solution to identify key customer segments.",
+                ["K-means", "PCA", "Pandas", "Scikit-learn"],
+            ),
+            project_card(
+                "Prediccion de recompra",
+                "bla bla bla",
+                ["BERT", "Transformers", "NLP", "PyTorch"],
+            ),
+            columns=rx.breakpoints(
+                xs="1",
+                sm="1",
+                md="2",
+                lg="3",
+                xl="3",
+            ),
+            spacing="6",
+            width="100%",
+            margin_top="8",
+            justify="center",
+        )
     )
 
     # Call to action section
