@@ -13,7 +13,7 @@ def project_card(title: str, description: str, tech_stack: list) -> rx.Component
                 flex_wrap="wrap",
                 spacing="2",
             ),
-            align="start", 
+            align="center", 
             spacing="3",
             padding="4"
         ),
@@ -21,54 +21,10 @@ def project_card(title: str, description: str, tech_stack: list) -> rx.Component
     )
 
 
-def testimonial_card(content: str, author: str, role: str) -> rx.Component:
-    return rx.box(
-        rx.vstack(
-            rx.text(f"{content}", font_style="italic", line_height="1.6"),
-            rx.spacer(),
-            rx.hstack(
-                rx.avatar(name=author, size="5"),
-                rx.vstack(
-                    rx.text(author, font_weight="bold"),
-                    rx.text(role, color="gray.500", font_size="sm"),
-                    align="start",
-                    spacing="0",
-                ),
-                width="100%",
-                justify="start",
-                margin_top="4",
-            ),
-            height="100%",
-            align="start",
-            justify="between",
-            padding="6",
-        ),
-        border_radius="lg",
-        bg="gray.50",
-        _dark={"bg": "gray.800"},
-        height="100%",
-    )
-
 @rx.page(route=PageRoutes.home, title=PageTitles.home)
 def home() -> rx.Component:
-    hero_section = rx.container(
-        rx.vstack(
-            rx.heading("Ignacio J López", size="9"),
-            rx.text(
-                "Data Scientist | Machine Learning Engineer | Python Developer",
-                font_size="2xl",
-                font_weight="bold",
-                text_color="gray.500",
-                text_align="center",
-                margin_bottom="4",
-            ),
-            rx.text(
-                "Turning data into action.",
-                font_size="lg",
-                text_align="left",
-                margin_bottom="8",
-            ),
-            rx.hstack(
+    # index in te top rigth corner
+    index_section = rx.hstack(
                 rx.button(
                     "My Projects",
                     color_scheme="indigo",
@@ -93,7 +49,37 @@ def home() -> rx.Component:
                     radius="large",
                     on_click=rx.redirect("/contact"),
                 ),
-                spacing="5"
+                spacing="5",
+                justify="end",
+                align="center"
+            )
+
+    hero_section = rx.container(
+        rx.vstack(
+            rx.heading("Ignacio J López", size="9"),
+            rx.text(
+                "Data Scientist | Machine Learning Engineer | Python Developer",
+                font_size="2xl",
+                font_weight="bold",
+                text_color="gray.500",
+                text_align="center",
+                margin_bottom="4",
+            ),
+            rx.text(
+                "I build data-driven solutions that solve real-world problems and drive business impact.",
+                font_size="lg",
+                text_align="left",
+                margin_bottom="8",
+            ),
+            rx.text(
+                "I'm a Data Scientist with 7 years of experience turning data into actionable insights."
+                "My background combines a strong foundation in statistics, machine learning, and data engineering, with a deep interest in solving business problems."
+                "I've worked on credit scoring models, customer segmentation, predictive analytics, and real-time dashboards."  
+                "I enjoy transforming complex datasets into clear, meaningful results that support strategic decisions."
+                "Currently, I’m focused on building scalable data products, improving model performance, and bridging the gap between technical and business teams.",
+                font_size="lg",
+                text_align="left",
+                margin_bottom="8",
             ),
             spacing="6",
             justify="center",
@@ -107,7 +93,7 @@ def home() -> rx.Component:
     # Projects showcase section
     projects_section = rx.container(
         rx.vstack(
-            rx.heading("Featured Data Projects", size="7", margin_bottom="6"),
+            rx.heading("Data Projects", size="7", margin_bottom="6"),
             rx.grid(
                 project_card(
                     "Competition: Goodreads Books Review Rating Prediction",
@@ -148,43 +134,6 @@ def home() -> rx.Component:
         width="100%",
         align="center",
         justify="center"
-    )
-
-    # Testimonials section
-    testimonials_section = rx.container(
-        rx.vstack(
-            rx.heading("Client Testimonials", size="7", margin_bottom="6"),
-            rx.grid(
-                testimonial_card(
-                    "Testimonial 1",
-                    "Sarah",
-                    "CTO, Empresa 1",
-                ),
-                testimonial_card(
-                    "Testimonial 2",
-                    "Michael",
-                    "VP of Operations, Empresa 2",
-                ),
-                testimonial_card(
-                    "Testimonial 3",
-                    "Elena",
-                    "Data Director, Empresa 3",
-                ),
-                columns=rx.breakpoints(
-                    xs="1",
-                    sm="1",
-                    md="2",
-                    lg="3",
-                    xl="3",
-                )
-            ),
-            width="100%",
-            padding_y="16",
-            id="testimonials",
-            align="center",
-            justify="center",
-        ),
-        max_width="1200px"
     )
 
     # Call to action section
@@ -232,9 +181,9 @@ def home() -> rx.Component:
 
     return rx.box(
         dark_mode_toggle,
+        index_section,
         hero_section,
         projects_section,
-        testimonials_section,
         cta_section,
         width="100%",
     )
