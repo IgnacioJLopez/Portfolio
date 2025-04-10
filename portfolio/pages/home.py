@@ -13,7 +13,7 @@ def project_card(title: str, description: str, tech_stack: list) -> rx.Component
                 flex_wrap="wrap",
                 spacing="2",
             ),
-            align="center", 
+            align="start", 
             spacing="3",
             padding="4"
         ),
@@ -51,7 +51,8 @@ def home() -> rx.Component:
                 ),
                 spacing="5",
                 justify="end",
-                align="center"
+                margin_top="40px",
+                margin_right="40px",
             )
 
     hero_section = rx.container(
@@ -91,18 +92,27 @@ def home() -> rx.Component:
     )
 
     projects_section =  rx.container(
-        rx.heading("Data Projects", size="7", id="projects", margin_bottom="19", align="center"),
+        rx.heading(
+            "Data Projects",
+            size="9",
+            weight="medium",
+            align="center",
+            color_scheme="iris",
+            id="projects",
+            margin_bottom="20px"       
+        ),
         rx.text(
             "Here are some of the projects I've worked on. Each project showcases my skills in data analysis, machine learning, and software development.",
             font_size="lg",
             text_align="center",
-            margin_bottom="16",
+            margin_bottom="50px",
+            color_scheme="yellow"
         ),
         rx.grid(
             project_card(
-                "Competition: Goodreads Books Review Rating Prediction",
-                "I trained various machine learning models including NMF, Naive Bayes, and Random Forest",
-                ["Sckit Learn", "NMF", "Naive Bayes", "NLP", "TensorFlow"],
+                "Real-Time Purchase Propensity Prediction Using Deep Learning",
+                "Built deep learning models (DeepAR, DeepTCN) to predict short-term repurchase probability based on customer time-series behaviour. ransitioned from monthly to daily pipelines to enable weekly forecasts, improving responsiveness in campaign targeting. Implemented scalable data pipelines for model training and real-time scoring.",
+                ["Python", "TensorFlow", "Time Series Forecasting", "DeepAR", 'DeepTCN',' Data Pipelines', 'Real-Time Analytics', 'MLOps',' Cloud Computing'],
             ),
             project_card(
                 "Customer Segmentation",
@@ -110,9 +120,9 @@ def home() -> rx.Component:
                 ["K-means", "PCA", "Pandas", "Scikit-learn"],
             ),
             project_card(
-                "Prediccion de recompra",
-                "bla bla bla",
-                ["BERT", "Transformers", "NLP", "PyTorch"],
+                "Predictive Modelling for Customer Behaviour in Credit and Marketing",
+                "Developed machine learning models to predict weekly and monthly customer credit uptake using transactional and behavioural data. Integrated marketing campaign results and credit simulations to improve renewal predictions. Designed automated segmentation and scoring systems updated daily for real-time decision-making.",
+                ["Python", "BigQuery", "Machine Learning", "Predictive Analytics", "Customer Segmentation", "Marketing Analytics"," Data Automation", "Feature Engineering"],
             ),
             columns=rx.breakpoints(
                 xs="1",
@@ -121,10 +131,10 @@ def home() -> rx.Component:
                 lg="3",
                 xl="3",
             ),
-            spacing="6",
+            spacing="9",
             width="100%",
-            margin_top="8",
             justify="center",
+            margin_bottom="100px"
         )
     )
 
@@ -166,8 +176,8 @@ def home() -> rx.Component:
     # Dark mode toggle
     dark_mode_toggle = rx.color_mode.button(
         position="fixed",
-        top="5",
-        left="5",
+        top="0",
+        left="0",
         z_index="999",
     )
 
