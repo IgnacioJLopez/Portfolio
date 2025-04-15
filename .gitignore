@@ -12,3 +12,5 @@ __pycache__/
 *.log
 reflex.db
 .reflex/
+
+*.png

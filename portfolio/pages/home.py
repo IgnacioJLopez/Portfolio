@@ -29,24 +29,21 @@ def home() -> rx.Component:
                     "My Projects",
                     color_scheme="indigo",
                     size='4',
-                    variant="outline",
-                    radius="large",
+                    variant="ghost",
                     on_click=rx.redirect("/projects")
                 ),
                 rx.button(
                     "About Me",
                     color_scheme="amber",
                     size='4',
-                    variant="outline",
-                    radius="large",
+                    variant="ghost",
                     on_click=rx.redirect("/about"),
                 ),
                 rx.button(
                     "Contact Me",
                     color_scheme="indigo",
                     size='4',
-                    variant="outline",
-                    radius="large",
+                    variant="ghost",
                     on_click=rx.redirect("/contact"),
                 ),
                 spacing="5",
@@ -55,42 +52,58 @@ def home() -> rx.Component:
                 margin_right="40px",
             )
 
-    hero_section = rx.container(
+    hero_section = rx.hstack(
         rx.vstack(
             rx.heading("Ignacio J López", size="9"),
             rx.text(
-                "Data Scientist | Machine Learning Engineer | Python Developer",
+                "Data Scientist   |   Machine Learning Engineer   |   Python Developer",
                 font_size="2xl",
                 font_weight="bold",
-                text_color="gray.500",
+                color_scheme="green",
                 text_align="center",
-                margin_bottom="4",
-            ),
-            rx.text(
-                "I build data-driven solutions that solve real-world problems and drive business impact.",
-                font_size="lg",
-                text_align="left",
                 margin_bottom="8",
             ),
             rx.text(
-                "I'm a Data Scientist with 7 years of experience turning data into actionable insights."
-                "My background combines a strong foundation in statistics, machine learning, and data engineering, with a deep interest in solving business problems."
-                "I've worked on credit scoring models, customer segmentation, predictive analytics, and real-time dashboards."  
-                "I enjoy transforming complex datasets into clear, meaningful results that support strategic decisions."
-                "Currently, I’m focused on building scalable data products, improving model performance, and bridging the gap between technical and business teams.",
+                "Welcome to my website built entirely with ",
+                rx.code("Python!"),
+                font_size="lg",
+                text_align="left",
+                margin_bottom="0",
+                color_scheme="orange",
+            ),
+            rx.text(
+                "I build data-driven solutions that solve real-world problems and drive business impact.\n"
+                "With over 7 years of experience transforming data into actionable insights, \nmy expertise combines a strong foundation in statistics, "
+                "machine learning, \nand data engineering, complemented by a deep interest in solving business problems.",
                 font_size="lg",
                 text_align="left",
                 margin_bottom="8",
+                white_space="pre-wrap",
             ),
             spacing="6",
             justify="center",
             align="start",
             padding_y="16",
             min_height="85vh",
+            max_width="1000px",
+            margin_right="200px",
         ),
-        max_width="1200px",
+        rx.image(
+            src="/images/anime_me.png",
+            width="300px",
+            height="auto",
+            align="center",
+            justify="center",
+        ),
+        justify="center",
+        align="center",
     )
 
+    # Timeline section
+    # @TODO timeline
+
+    
+    # Projects section
     projects_section =  rx.container(
         rx.heading(
             "Data Projects",
@@ -104,9 +117,12 @@ def home() -> rx.Component:
         rx.text(
             "Here are some of the projects I've worked on. Each project showcases my skills in data analysis, machine learning, and software development.",
             font_size="lg",
+            align="center",
             text_align="center",
             margin_bottom="50px",
-            color_scheme="yellow"
+            color_scheme="yellow",
+            max_width="100%",
+
         ),
         rx.grid(
             project_card(
@@ -134,8 +150,8 @@ def home() -> rx.Component:
             spacing="9",
             width="100%",
             justify="center",
-            margin_bottom="100px"
-        )
+            margin_bottom="100px",
+        ),
     )
 
     # Call to action section
