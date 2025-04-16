@@ -54,22 +54,32 @@ def home() -> rx.Component:
 
     hero_section = rx.hstack(
         rx.vstack(
-            rx.heading("Ignacio J López", size="9"),
+            rx.heading(
+                "Ignacio J López",
+                size="9",
+                style={
+                    "margin_bottom": "-15px"
+                },
+            ),
             rx.text(
                 "Data Scientist   |   Machine Learning Engineer   |   Python Developer",
                 font_size="2xl",
                 font_weight="bold",
-                color_scheme="green",
+                color_scheme="indigo",
                 text_align="center",
-                margin_bottom="8",
+                style={
+                    "margin_bottom": "25px"
+                },
             ),
             rx.text(
                 "Welcome to my website built entirely with ",
                 rx.code("Python!"),
                 font_size="lg",
                 text_align="left",
-                margin_bottom="0",
                 color_scheme="orange",
+                style={
+                    "margin_bottom": "25px"
+                },
             ),
             rx.text(
                 "I build data-driven solutions that solve real-world problems and drive business impact.\n"
@@ -97,6 +107,7 @@ def home() -> rx.Component:
         ),
         justify="center",
         align="center",
+        margin_bottom="100px",
     )
 
     # Timeline section
