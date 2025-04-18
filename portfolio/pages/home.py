@@ -111,7 +111,174 @@ def home() -> rx.Component:
     )
 
     # Timeline section
-    # @TODO timeline
+    timeline_section = rx.vstack(
+        rx.heading(
+            "My Professional Journey",
+            size="7",
+            margin_bottom="8",
+            color_scheme="indigo",
+        ),
+        rx.box(
+            rx.vstack(
+                # 2024
+                rx.hstack(
+                    rx.box(
+                        rx.text("2024", font_weight="bold", color_scheme="indigo", font_size="xl"),
+                        width="15%",
+                        text_align="right",
+                        padding_right="4",
+                    ),
+                    rx.divider(orientation="vertical", height="auto"),
+                    rx.box(
+                        rx.vstack(
+                            rx.heading("Senior Data Scientist", size="5", margin_bottom="1"),
+                            rx.text("TechInnovate Solutions"),
+                            rx.text(
+                                "Led the development of a predictive maintenance model that reduced equipment downtime by 35%. "
+                                "Mentored junior data scientists and implemented MLOps best practices across the team.",
+                                color="gray.600",
+                            ),
+                            align_items="start",
+                            padding="4",
+                            border_radius="lg",
+                            background="gray.50",
+                            margin_bottom="6",
+                            width="100%",
+                        ),
+                        width="85%",
+                    ),
+                    align_items="flex-start",
+                ),
+                
+                # 2022-2023
+                rx.hstack(
+                    rx.box(
+                        rx.text("2022-2023", font_weight="bold", color_scheme="indigo", font_size="xl"),
+                        width="15%",
+                        text_align="right",
+                        padding_right="4",
+                    ),
+                    rx.divider(orientation="vertical", height="auto"),
+                    rx.box(
+                        rx.vstack(
+                            rx.heading("Machine Learning Engineer", size="5", margin_bottom="1"),
+                            rx.text("DataDriven Enterprises"),
+                            rx.text(
+                                "Developed and deployed machine learning models for customer segmentation and churn prediction. "
+                                "Implemented data pipelines that improved processing efficiency by 40%.",
+                                color="gray.600",
+                            ),
+                            align_items="start",
+                            padding="4",
+                            border_radius="lg",
+                            background="gray.50",
+                            margin_bottom="6",
+                            width="100%",
+                        ),
+                        width="85%",
+                    ),
+                    align_items="flex-start",
+                ),
+                
+                # 2020-2022
+                rx.hstack(
+                    rx.box(
+                        rx.text("2020-2022", font_weight="bold", color_scheme="indigo", font_size="xl"),
+                        width="15%",
+                        text_align="right",
+                        padding_right="4",
+                    ),
+                    rx.divider(orientation="vertical", height="auto"),
+                    rx.box(
+                        rx.vstack(
+                            rx.heading("Data Scientist", size="5", margin_bottom="1"),
+                            rx.text("AI Solutions Inc"),
+                            rx.text(
+                                "Created a recommendation system that increased user engagement by 25%. "
+                                "Collaborated with cross-functional teams to integrate analytics into product development.",
+                                color="gray.600",
+                            ),
+                            align_items="start",
+                            padding="4",
+                            border_radius="lg",
+                            background="gray.50",
+                            margin_bottom="6",
+                            width="100%",
+                        ),
+                        width="85%",
+                    ),
+                    align_items="flex_start",
+                ),
+                
+                # 2018-2020
+                rx.hstack(
+                    rx.box(
+                        rx.text("2018-2020", font_weight="bold", color_scheme="indigo", font_size="xl"),
+                        width="15%",
+                        text_align="right",
+                        padding_right="4",
+                    ),
+                    rx.divider(orientation="vertical", height="auto"),
+                    rx.box(
+                        rx.vstack(
+                            rx.heading("Python Developer", size="5", margin_bottom="1"),
+                            rx.text("Tech Innovators"),
+                            rx.text(
+                                "Built data analysis tools and dashboards that provided actionable insights to stakeholders. "
+                                "Optimized database queries resulting in 30% faster application performance.",
+                                color="gray.600",
+                            ),
+                            align_items="start",
+                            padding="4",
+                            border_radius="lg",
+                            background="gray.50",
+                            margin_bottom="6",
+                            width="100%",
+                        ),
+                        width="85%",
+                    ),
+                    align_items="flex_start",
+                ),
+                
+                # Education 
+                rx.hstack(
+                    rx.box(
+                        rx.text("Education", font_weight="bold", color_scheme="orange", font_size="2xl"),
+                        width="25%",
+                        text_align="center",
+                        padding_right="4",
+                    ),
+                    rx.divider(orientation="vertical", height="auto"),
+                    rx.box(
+                        rx.vstack(
+                            rx.heading("BSc in Data Science", size="5", margin_bottom="1"),
+                            rx.text("National University - 2018"),
+                            rx.spacer(height="4"),
+                            rx.heading("BSc in Physics Science", size="5", margin_bottom="1"),
+                            rx.text("Tech University - 2016"),
+                            align_items="start",
+                            padding="4",
+                            border_radius="lg",
+                            background="gray.50",
+                            width="100%",
+                        ),
+                        width="85%",
+                    ),
+                    align_items="flex_start",
+                    margin_top="40px",
+                ),
+                width="100%",
+            ),
+            width="100%",
+            max_width="1000px",
+            padding_y="8",
+        ),
+        spacing="6",
+        align="center",
+        padding_y="16",
+        width="100%",
+        margin_bottom="100px",
+    )
 
     
     # Projects section
@@ -212,6 +379,7 @@ def home() -> rx.Component:
         dark_mode_toggle,
         index_section,
         hero_section,
+        timeline_section,
         projects_section,
         cta_section,
         width="100%",
