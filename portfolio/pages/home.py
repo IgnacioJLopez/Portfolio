@@ -99,7 +99,7 @@ def home() -> rx.Component:
             margin_right="200px",
         ),
         rx.image(
-            src="/images/anime_me.png",
+            src="/images/anime_me_2.png",
             width="300px",
             height="auto",
             align="center",
@@ -132,7 +132,7 @@ def home() -> rx.Component:
                     rx.box(
                         rx.vstack(
                             rx.heading("Senior Data Scientist", size="5", margin_bottom="1"),
-                            rx.text("TechInnovate Solutions"),
+                            rx.text("Frávega Tech"),
                             rx.text(
                                 "Led the development of a predictive maintenance model that reduced equipment downtime by 35%. "
                                 "Mentored junior data scientists and implemented MLOps best practices across the team.",
@@ -150,10 +150,10 @@ def home() -> rx.Component:
                     align_items="flex-start",
                 ),
                 
-                # 2022-2023
+                # 2023-2024
                 rx.hstack(
                     rx.box(
-                        rx.text("2022-2023", font_weight="bold", color_scheme="indigo", font_size="xl"),
+                        rx.text("2023-2024", font_weight="bold", color_scheme="indigo", font_size="xl"),
                         width="15%",
                         text_align="right",
                         padding_right="4",
@@ -161,11 +161,12 @@ def home() -> rx.Component:
                     rx.divider(orientation="vertical", height="auto"),
                     rx.box(
                         rx.vstack(
-                            rx.heading("Machine Learning Engineer", size="5", margin_bottom="1"),
-                            rx.text("DataDriven Enterprises"),
+                            rx.heading("Data analyst", size="5", margin_bottom="1"),
+                            rx.text("Spazios"),
                             rx.text(
-                                "Developed and deployed machine learning models for customer segmentation and churn prediction. "
-                                "Implemented data pipelines that improved processing efficiency by 40%.",
+                                "Responsible for developing and maintaining key automation processes to ensure a steady flow of leads." 
+                                "Worked with databases and CRMs to extract, process, and analyse data using APIs, webhooks, and Python."
+                                "Created interactive dashboards and reports in Power BI to support business decision-making.",
                                 color="gray.600",
                             ),
                             align_items="start",
@@ -180,10 +181,10 @@ def home() -> rx.Component:
                     align_items="flex-start",
                 ),
                 
-                # 2020-2022
+                # 2021-2023
                 rx.hstack(
                     rx.box(
-                        rx.text("2020-2022", font_weight="bold", color_scheme="indigo", font_size="xl"),
+                        rx.text("2021-2023", font_weight="bold", color_scheme="indigo", font_size="xl"),
                         width="15%",
                         text_align="right",
                         padding_right="4",
@@ -191,11 +192,12 @@ def home() -> rx.Component:
                     rx.divider(orientation="vertical", height="auto"),
                     rx.box(
                         rx.vstack(
-                            rx.heading("Data Scientist", size="5", margin_bottom="1"),
-                            rx.text("AI Solutions Inc"),
+                            rx.heading("Physics Laboratory Technician", size="5", margin_bottom="1"),
+                            rx.text("Physics Department Universidad de Buenos Aires"),
                             rx.text(
-                                "Created a recommendation system that increased user engagement by 25%. "
-                                "Collaborated with cross-functional teams to integrate analytics into product development.",
+                                "Responsible for developing and maintaining key automation processes to ensure a steady flow of leads." 
+                                "Worked with databases and CRMs to extract, process, and analyse data using APIs, webhooks, and Python."
+                                "Created interactive dashboards and reports in Power BI to support business decision-making.",
                                 color="gray.600",
                             ),
                             align_items="start",
@@ -213,7 +215,7 @@ def home() -> rx.Component:
                 # 2018-2020
                 rx.hstack(
                     rx.box(
-                        rx.text("2018-2020", font_weight="bold", color_scheme="indigo", font_size="xl"),
+                        rx.text("2018-2025", font_weight="bold", color_scheme="indigo", font_size="xl"),
                         width="15%",
                         text_align="right",
                         padding_right="4",
@@ -221,11 +223,11 @@ def home() -> rx.Component:
                     rx.divider(orientation="vertical", height="auto"),
                     rx.box(
                         rx.vstack(
-                            rx.heading("Python Developer", size="5", margin_bottom="1"),
-                            rx.text("Tech Innovators"),
+                            rx.heading("Private Physics Educator", size="5", margin_bottom="1"),
+                            rx.text("In-person and virtual"),
                             rx.text(
-                                "Built data analysis tools and dashboards that provided actionable insights to stakeholders. "
-                                "Optimized database queries resulting in 30% faster application performance.",
+                                "Provided private tutoring in Physics and Mathematics to undergraduate students in Physics and related fields."
+                                " Helped students improve their understanding of key concepts and succeed in their academic courses.",
                                 color="gray.600",
                             ),
                             align_items="start",
@@ -245,24 +247,28 @@ def home() -> rx.Component:
                     rx.box(
                         rx.text("Education", font_weight="bold", color_scheme="orange", font_size="2xl"),
                         width="25%",
-                        text_align="center",
+                        text_align="right",
                         padding_right="4",
+                        margin_left="64px",
                     ),
                     rx.divider(orientation="vertical", height="auto"),
                     rx.box(
                         rx.vstack(
                             rx.heading("BSc in Data Science", size="5", margin_bottom="1"),
-                            rx.text("National University - 2018"),
+                            rx.text("Universidad de Buenos Aires 2022 - 2025"),
                             rx.spacer(height="4"),
                             rx.heading("BSc in Physics Science", size="5", margin_bottom="1"),
-                            rx.text("Tech University - 2016"),
+                            rx.text("Universidad de Buenos Aires 2016 - 2022"),
                             align_items="start",
                             padding="4",
                             border_radius="lg",
                             background="gray.50",
+                            margin_bottom="6",
                             width="100%",
                         ),
-                        width="85%",
+                        width="100%",
+                        margin_left="10px",
+
                     ),
                     align_items="flex_start",
                     margin_top="40px",
