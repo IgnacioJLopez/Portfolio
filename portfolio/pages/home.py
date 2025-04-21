@@ -21,6 +21,7 @@ def project_card(title: str, description: str, tech_stack: list) -> rx.Component
     )
 
 
+
 @rx.page(route=PageRoutes.home, title=PageTitles.home)
 def home() -> rx.Component:
     # index in te top rigth corner
@@ -134,8 +135,8 @@ def home() -> rx.Component:
                             rx.heading("Senior Data Scientist", size="5", margin_bottom="1"),
                             rx.text("Frávega Tech"),
                             rx.text(
-                                "Led the development of a predictive maintenance model that reduced equipment downtime by 35%. "
-                                "Mentored junior data scientists and implemented MLOps best practices across the team.",
+                                "I leverage Google Cloud tools to build scalable data solutions that drive business growth." 
+                                " My work includes automating customer segmentation, developing predictive models to anticipate purchasing behaviour, and delivering actionable insights through clear visualisations and strategic reporting.",
                                 color="gray.600",
                             ),
                             align_items="start",
@@ -257,7 +258,7 @@ def home() -> rx.Component:
                             rx.heading("BSc in Data Science", size="5", margin_bottom="1"),
                             rx.text("Universidad de Buenos Aires 2022 - 2025"),
                             rx.spacer(height="4"),
-                            rx.heading("BSc in Physics Science", size="5", margin_bottom="1"),
+                            rx.heading("BSc in Physics", size="5", margin_bottom="1"),
                             rx.text("Universidad de Buenos Aires 2016 - 2022"),
                             align_items="start",
                             padding="4",
